@@ -1,0 +1,10 @@
+.env
+config.py
+venv/
+*.pyc
+*.log
+token.json
+.vscode/
+story.yaml
+__pycache__/
+log/

@@ -1,0 +1,49 @@
+<h1 class="headings">Example Interactive Chart: Presalytics ROI Calculator</h1> 
+<div class="flex-container">
+    <div class="left-window">
+        <h3 class="headings">3-year Savings: <span id="savings"></span></h5>
+
+        <div class="input-wrapper">
+            <h3 class="headings">Company Info</h3>
+            <div>
+                <label for="ftes">Sales Support Headcount</label>
+                <input type="number"  id="ftes" name="ftes"min="1" max="100000" oninput="updateChart()">
+            </div>
+            <div>
+                <label for="cost">Annual Cost Per Sales Support Person ($000s)</label>
+                <input type="number" id="cost" name="cost"min="1000" max="1000000" oninput="updateChart()">
+            </div>
+            <div>
+                <label for="alloc">Time Spent on Decks (%)</label>
+                <input type="number" id="alloc" name="alloc" min="1000" max="1000000" oninput="updateChart()">
+            </div>
+            <div>
+                <label for="size">Company Size</label>
+                <input type="number" id="size" name="companySize" oninput="updateChart()">
+            </div>
+        </div>
+        <div class="integration-radio">
+            <h3 class="headings">Presalytics Plan</h3>
+            <div>
+                <input type="radio" id="plan-basic" name="plan-type" value="basic" checked oninput="updateChart()">
+                <label for="integration-vendor">Basic</label>
+              </div>
+              
+              <div>
+                <input type="radio" id="plan-pro" name="plan-type" value="pro" oninput="updateChart()">
+                <label for="intregration-inhouse">Pro</label>
+              </div>
+
+              <div>
+                <input type="radio" id="plan-enterprise" name="plan-type" value="enterprise" oninput="updateChart()">
+                <label for="intregration-inhouse">Enterprise</label>
+              </div>
+        </div>
+
+    </div>
+    <div class="center-window">
+        <h3 class="headings">ROI Analysis</h3>
+        <div id="chart"></div>
+    </div>
+
+</div>
